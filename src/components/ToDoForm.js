@@ -17,7 +17,7 @@ const ToDoForm = ({ addTodo }) => {
       <button type='submit' className='todo-btn'>Add Task</button>
 
     </form>
-  );
+  )
 }
 
 export default ToDoForm;
