@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #99e7e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #ebffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ToDoWrapper {
+  background: #1db99f;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.ToDoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #99e7e3;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #bfe5fc;
+}
+
+.todo-btn {
+  background: #99e7e3;
+  color: #0f354b;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #99e7e3;
+  color: #0f354b;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.form-check-input {
+  display: none;
+  margin-right: 12.5px;
+  margin-bottom: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.completed {
+  color: #31343598;
+  font-weight: bolder;
+  text-decoration: line-through;
+}
+
+label {
+  width: 100px;
+  height: 45px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+label:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  background: linear-gradient(180deg, #f5e344d2, #fadb2a);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.toggle-btn {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  left: 97px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+label,
+label:after {
+  transition: 0.3s;
+}
+
+label:active:after {
+  width: 100px;
+}
+
+label svg {
+  position: absolute;
+  width: 27px;
+  top: 9px;
+  z-index: 100;
+}
+label svg.sun {
+  left: 9px;
+  fill: #fff;
+  transition: 0.3s;
+}
+label svg.moon {
+  left: 66px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+input:checked + label svg.sun {
+  fill: #7e7e7e;
+}
+input:checked + label svg.moon {
+  fill: #fff;
+}
+
+#checkbox-toggle {
+  position: relative;
+  left: 172px;
+  top: 0px;
+}
+
+body.dark-mode {
+  background: #232e35;
+}
+
+.dark-mode h1 {
+  color: #9cb6c5;
+}
+
+.dark-mode .ToDoWrapper {
+  background: #30434e;
+}
+
+.dark-mode .todo-input {
+  border-color: #232e35;
+  color: #fff;
+}
+
+.dark-mode .todo-input::placeholder {
+  color: #bfe5fc;
+}
+
+.dark-mode .todo-btn {
+  background-color: #232e35;
+  color: #75abca;
+}
+
+.dark-mode .Todo {
+  background-color: #232e35;
+  color: #75abca;
+}
+
+.dark-mode .completed {
+  color: #ddd;
+}
