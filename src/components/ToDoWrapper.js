@@ -62,7 +62,7 @@ const ToDoWrapper = () => {
         ) :
           (<Todo task={todo} key={todo.id} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
 
-          )))};
+          )))}
 
 
 
